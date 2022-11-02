@@ -1,0 +1,87 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/homepage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.div_header_home {
+    display: flex;
+    margin-left: 140px;
+    gap: 11px;
+    align-items: center;
+}
+
+.logo {
+    width: 16px;
+    height: 16px;
+    background: rgba(66, 0, 255, 0.5);
+    border-radius: 8px;
+}
+
+.title_home {
+    font-family: "Inter", sans-serif;
+    font-size: var(--font2);
+    letter-spacing: 0%;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.div_button_home {
+    display: flex;
+    margin-right: 140px;
+    gap: 11px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/homepage.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    height: 50%;
+    width: 25%;
+    padding: 40px 42px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.div_inputs_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.subtitle_home {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--black);
+
+}

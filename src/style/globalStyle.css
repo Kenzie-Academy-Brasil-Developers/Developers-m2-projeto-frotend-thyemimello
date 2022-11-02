@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root {
+    --purple: "hsl(230, 57%, 50%)";
+    --purple2: "#4200FF";
+    --withe: "#ffffff";
+    --black: "#000000";
+    --red: "#CE4646";
+    --green: "#4BA036";
+}
