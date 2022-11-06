@@ -1,0 +1,508 @@
+header {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 140px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 6.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo > span {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(66, 0, 255, 0.5);
+  border-radius: 50%;
+}
+.logo > h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 39px;
+}
+
+.logoutBtn {
+  border: 1px solid #4200ff;
+  background-color: transparent;
+  width: 142px;
+  height: 48px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #4200ff;
+}
+
+#departamentNav {
+  padding: 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+#departamentNav > h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #000000;
+}
+#departamentNav > select {
+  border: 1px solid #000000;
+  border-radius: 15px;
+  text-align: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+#departamentNav > button {
+  background: #4200ff;
+  width: 150px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 140px;
+}
+
+#departamentsContainer {
+  background: #f8f8f8;
+  padding: 2rem 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 385px;
+  overflow-y: auto;
+  margin-bottom: 69px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.departamentCard {
+  background: #ffffff;
+  border-bottom: 1px solid #4200ff;
+  padding: 1rem 2rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.departamentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.departamentContent > h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+.departamentContent > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.buttonsContainer > button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#TitleUser {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #000000;
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+#userContainer {
+  background: #f8f8f8;
+  padding: 2rem 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-height: 385px;
+  overflow-y: auto;
+  width: 100%;
+  gap: 1rem;
+}
+
+.userCard {
+  background: #ffffff;
+  border-bottom: 1px solid #4200ff;
+  padding: 1rem 2rem;
+  width: 40%;
+  height: 150px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.userContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userContent > h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+.userContent > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+/* Modal */
+
+.modalBackground {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(70, 35, 167, 0.13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer {
+  background-color: white;
+  padding: 40px 50px;
+  gap: 14px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+
+.modalHeader > h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 60px;
+
+  color: #000000;
+}
+.modalHeader > button {
+  align-self: flex-start;
+  background-color: transparent;
+  font-weight: 700;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 21px;
+}
+
+.formContainer > input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.formContainer > select {
+  height: 52px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  padding: 17px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+.submitButton {
+  background: #4200ff;
+  width: 100%;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Modal Create */
+
+.modalBackground {
+}
+.modalContainer {
+}
+.modalHeaderCreate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 31px;
+}
+.modalHeaderCreate > h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.modalHeaderCreate > button {
+  background-color: transparent;
+  cursor: pointer;
+}
+.modalSubHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textContainer > h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.textContainer > span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.modalInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+.modalInputContainer > input {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+.modalInputContainer > button {
+  align-self: flex-end;
+
+  width: 157px;
+  height: 48px;
+
+  background: #4ba036;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.usersContainer {
+  margin-top: 3rem;
+  background: #f8f8f8;
+  padding: 2rem 3.5rem;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+  gap: 1rem;
+}
+
+.userCardDetails {
+  background: #ffffff;
+  border-bottom: 1px solid #4200ff;
+  padding: 1rem 2rem;
+  width: 40%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.userCardDetails > h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+.userCardDetails > span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.userCardDetails > button {
+  width: 157px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #ce4646;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ce4646;
+}
+
+/* Modal Delete */
+
+.modalDeleteContainer {
+  background-color: white;
+  padding: 40px 50px;
+  gap: 14px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  align-self: flex-end;
+  background-color: transparent;
+}
+.modalDeleteContainer > h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.deleteButton {
+  background: #4ba036;
+  width: 422px;
+  height: 48px;
+  align-self: center;
+  margin-top: 2.2rem;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}

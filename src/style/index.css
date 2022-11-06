@@ -77,7 +77,7 @@ main {
 
 }
 
-.list_home {
+.li_home {
     display: flex;
     flex-direction: column;
     gap: 22px;
