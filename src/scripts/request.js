@@ -18,7 +18,7 @@ const verifyAdmin = async (token) => {
     const response = await request.json();
     return response.is_admin;
   } catch (erro) {
-    toast("erro", "E-mail ou senha invalidos");
+    toast("Erro!", "E-mail ou senha invalidos");
   }
 };
 
@@ -45,6 +45,7 @@ export async function registerUser(body) {
 }
 
 export async function loginUser(body) {
+  console.log(body);
   try {
     const request = await fetch(apiUrl + "auth/login", {
       method: "POST",
@@ -55,16 +56,21 @@ export async function loginUser(body) {
     });
 
     const response = await request.json();
-    localStorage.setItem("@Token", JSON.stringify(response.token));
-    let isAdmin = await verifyAdmin(response.token);
-    if (isAdmin) {
-      window.location.href = "/src/pages/admPage/adm.html";
+
+    if (!response.error) {
+      localStorage.setItem("@Token", JSON.stringify(response.token));
+      console.log("Entrou");
+      let isAdmin = await verifyAdmin(response.token);
+      if (isAdmin) {
+        window.location.href = "/src/pages/admPage/adm.html";
+      } else {
+        window.location.href = "/src/pages/usuarioPage/usuario.html";
+      }
     } else {
-      window.location.href = "/src/pages/usuarioPage/usuario.html";
+      console.log(erro);
+      toast("erro", "E-mail ou senha invalidos");
     }
-  } catch (erro) {
-    toast("erro", "E-mail ou senha invalidos");
-  }
+  } catch (erro) {}
 }
 
 export async function getWorks() {

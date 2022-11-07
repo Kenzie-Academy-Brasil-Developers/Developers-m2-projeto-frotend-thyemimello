@@ -5,7 +5,9 @@ import {
   getUserProfile,
 } from "./requests.js";
 
-const token = JSON.parse(localStorage.getItem("@Token"));
+if (!localStorage.getItem("@Token")) {
+  window.location.href = "/src/pages/login.html";
+}
 
 const user = await getUserProfile(token);
 const departamentInfo = await getDepartamentFromUser(token);
@@ -88,5 +90,5 @@ if (!departamentInfo.error) {
 }
 
 displayUser(user);
-logoutFunction()
-openModal()
+logoutFunction();
+openModal();

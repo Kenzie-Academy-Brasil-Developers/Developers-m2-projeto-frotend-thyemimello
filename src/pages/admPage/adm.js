@@ -1,6 +1,11 @@
 import { logoutFunction } from "../usuarioPage/buttons.js";
 import { departamentDetails } from "./buttonAdm.js";
-import { deleteModal, deleteUserModal, editDepartamentModal, editUserModal } from "./modals.js";
+import {
+  deleteModal,
+  deleteUserModal,
+  editDepartamentModal,
+  editUserModal,
+} from "./modals.js";
 import {
   getAllCompanies,
   getAllDepartaments,
@@ -8,6 +13,10 @@ import {
   getAllUnemployed,
   getAllUsers,
 } from "./requestAdm.js";
+
+if (!localStorage.getItem("@Token")) {
+  window.location.href = "/src/pages/login.html";
+}
 
 const token = JSON.parse(localStorage.getItem("@Token"));
 
@@ -153,10 +162,10 @@ const displayAllUsers = (users) => {
     deleteButton.appendChild(deleteImg);
 
     editButton.addEventListener("click", () => {
-      editUserModal(user)
+      editUserModal(user);
     });
     deleteButton.addEventListener("click", () => {
-      deleteUserModal(user)
+      deleteUserModal(user);
     });
 
     buttonsContainer.append(editButton, deleteButton);

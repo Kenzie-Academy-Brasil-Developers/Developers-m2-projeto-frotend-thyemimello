@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/globalStyle.css">
-    <link rel="stylesheet" href="../style/login.css">
-    <link rel="stylesheet" href="../style/button.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/globalStyle.css" />
+    <link rel="stylesheet" href="../style/login.css" />
+    <link rel="stylesheet" href="../style/button.css" />
     <title>Kenzie Empresas</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="div_logo_page">
-            <div class="logo_login"></div>
-            <h1 class="title_login">Kenzie Empresas</h1>
-        </div>
-        <div class="div_buttons_login">
-            <button class="button_homepage button_purple1" type="button">Home</button>
-            <button class="button_purple2 button_register " type="button">Cadastro</button>
-        </div>
+      <div class="div_logo_page">
+        <div class="logo_login"></div>
+        <h1 class="title_login">Kenzie Empresas</h1>
+      </div>
+      <div class="div_buttons_login">
+        <button class="button_homepage button_purple1" type="button">
+          Home
+        </button>
+        <button class="button_purple2 button_register" type="button">
+          Cadastro
+        </button>
+      </div>
     </header>
     <main>
+      <form class="form_register_page">
         <div class="div_title_page">
-            <h2 class="subTitle_page">Login</h2>
-            <p class="text_page">Preencha os campos para realizar o login</p>
+          <h2 class="subTitle_page">Login</h2>
+          <p class="text_page">Preencha os campos para realizar o login</p>
         </div>
-        <form class="form_register_page">
-            <input class="input_page" type="email" id="email" placeholder="Seu e-mail">
-            <input class="input_page" type="password" id="password" placeholder="Sua senha">
-            <div>
-                <button class="buttons-form1
-                " type="submit">Login</button>
-                <p class="text_page">ou</p>
-                <button class="buttons-form2 button_register
-                " type="button">Cadastra-se</button>
-
-            </div>
-
-        </form>
+        <input
+          class="input_page"
+          type="email"
+          id="email"
+          placeholder="Seu e-mail"
+        />
+        <input
+          class="input_page"
+          type="password"
+          id="password"
+          placeholder="Sua senha"
+        />
+        <div class="buttons_container">
+          <button class="button_form1" type="submit">Login</button>
+          <p class="text_page">ou</p>
+          <button class="button_form2 button_register" type="button">
+            Cadastra-se
+          </button>
+        </div>
+      </form>
     </main>
     <script type="module" src="../scripts/login.js"></script>
-</body>
-
+  </body>
 </html>
