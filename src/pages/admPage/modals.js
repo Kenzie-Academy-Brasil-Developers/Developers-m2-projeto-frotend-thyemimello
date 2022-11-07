@@ -1,5 +1,5 @@
 import { createBody, editBody, editUserBody } from "./buttonAdm.js";
-import { deleteDepartament, deleteUser, hireUser } from "./requestAdm.js";
+import { deleteDepartament, deleteUser, dismissUser, hireUser } from "./requestAdm.js";
 
 export const createModal = (allCompanies) => {
   const body = document.querySelector("body");
@@ -127,16 +127,20 @@ export const DetailsModal = (departament, usersDepartament, allUnemployed) => {
     const userTitle = document.createElement("h2");
     const userLevel = document.createElement("span");
     const userCompany = document.createElement("span");
-    const firedButton = document.createElement("button");
+    const dismissButton = document.createElement("button");
 
     userCard.classList.add("userCardDetails");
 
     userTitle.innerText = user.username;
     userLevel.innerText = user.professional_level;
     userCompany.innerText = departament.companies.name;
-    firedButton.innerText = "Desligar";
+    dismissButton.innerText = "Desligar";
 
-    userCard.append(userTitle, userLevel, userCompany, firedButton);
+    dismissButton.addEventListener('click', ()=> {
+      dismissUser(user.uuid)
+    })
+
+    userCard.append(userTitle, userLevel, userCompany, dismissButton);
 
     usersContainer.appendChild(userCard);
   });

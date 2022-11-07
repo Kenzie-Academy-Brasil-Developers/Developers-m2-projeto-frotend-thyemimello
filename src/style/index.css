@@ -34,7 +34,7 @@ header {
 
 .div_button_home {
   display: flex;
-  margin-right: 140px;
+  margin-right: 6px;
   gap: 11px;
   align-items: center;
 }
@@ -107,7 +107,7 @@ ul {
   background-color: white;
 }
 
-.li_home > h2 {
+.li_home>h2 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -117,7 +117,7 @@ ul {
   color: #000000;
 }
 
-.li_home > p {
+.li_home>p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -127,7 +127,7 @@ ul {
   color: #000000;
 }
 
-.li_home > button {
+.li_home>button {
   border: 1px solid #4200ff;
   border-radius: 255px;
   width: 93px;

@@ -203,3 +203,24 @@ export const deleteUser = async (uuid) => {
     console.log(erro);
   }
 };
+
+export const dismissUser = async (uuid) => {
+  const token = JSON.parse(localStorage.getItem("@Token"));
+  try {
+    const date = await fetch(
+      `http://localhost:6278/departments/dismiss/${uuid}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    const dateJson = await date.json();
+    console.log(dateJson);
+    window.location.reload();
+  } catch (erro) {
+    console.log(erro);
+  }
+};
